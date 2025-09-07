@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darac Eagle Wings Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, purple, red, #000033, green);
+      background-attachment: fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Hero section with school10.jpg */
+    .hero {
+      background: url("images/school9.jpg") no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    header img {
+      height: 100px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px red, 0 0 20px purple; }
+      to { text-shadow: 0 0 20px green, 0 0 30px blue; }
+    }
+
+    nav {
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+    }
+
+    nav a {
+      color: yellow;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1000px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: cyan;
+    }
+
+    marquee {
+      color: orange;
+      font-weight: bold;
+    }
+
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      padding: 15px;
+      background: rgba(0,0,0,0.8);
+      font-size: 0.9em;
+    }
+
+    footer p {
+      color: red;
+      margin: 5px 0;
+    }
+
+    .social a {
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Feedback section */
+    #feedback-form textarea {
+      width: 90%;
+      height: 80px;
+      margin: 10px 0;
+    }
+
+    #comments-wall {
+      text-align: left;
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 10px;
+      padding: 10px;
+      background: #222;
+      border-radius: 5px;
+    }
+
+    .comment {
+      padding: 5px;
+      margin: 5px 0;
+      background: #444;
+      border-radius: 5px;
+    }
+
+    /* Like, support, share buttons */
+    .interaction {
+      margin: 20px 0;
+    }
+    .interaction button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .like { background: red; color: white; }
+    .support { background: green; color: white; }
+    .share { background: blue; color: white; }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 15px;
+      z-index: 100;
+    }
+
+    .whatsapp-float img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Contact form */
+    #contact-form input, #contact-form textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #contact-form button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background: cyan;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Banner -->
+  <div class="hero">
+    <header>
+      <img src="images/badge.jpg" alt="School Badge">
+      <h1>Darac Eagle Wings Academy</h1>
+      <p><em>"Carry You Higher"</em></p>
+    </header>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About section -->
+  <section id="about">
+    <h2>School Vision</h2>
+    <p>"To emerge as a premier global institution, fostering a community of visionary leaders, innovators, and scholars who transcend geographical
+      boundaries, drive transformative change, and excel in an increasingly interconnected world."</p>
+
+    <h2>School Mission</h2>
+    <p>"To provide a transformative education that fosters intellectual curiosity, creativity, and critical thinking, empowering students to become adaptable,
+      resilient, and socially responsible leaders who drive positive change in an increasingly complex and interconnected world."</p>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs">
+    <h2>Admissions & Programs</h2>
+    <p>We offer: Creche, Nursery, Kindergarten, Primary, and JHS</p>
+  </section>
+
+  <!-- News -->
+  <section id="news">
+    <h2>News & Announcements</h2>
+    <marquee direction="up" scrollamount="2" height="60px">
+      📢 Admissions are open! Join us today.
+    </marquee>
+  </section>
+
+  <!-- Entertainment -->
+  <section id="entertainment">
+    <h2>Entertainment</h2>
+    <marquee direction="up" scrollamount="2" height="80px">
+      🎶 Fun activities and events are always part of our school life!<br>
+      ⚽ Sports, music, and cultural programs to inspire students.<br>
+      🎭 Creative drama and talent shows every term.
+    </marquee>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/school4.jpg" alt="Gallery image">
+      <img src="images/school5.jpg" alt="Gallery image">
+      <img src="images/school6.jpg" alt="Gallery image">
+      <img src="images/school7.jpg" alt="Gallery image">
+      <img src="images/school8.jpg" alt="Gallery image">
+      <img src="images/school9.jpg" alt="Gallery image">
+      <img src="images/school10.jpg" alt="Gallery image">
+      <img src="images/school11.jpg" alt="Gallery image">
+      <img src="images/school12.jpg" alt="Gallery image">
+      <img src="images/school13.jpg" alt="Gallery image">
+    </div>
+  </section>
+
+  <!-- Feedback -->
+  <section id="feedback">
+    <h2>Feedback from Visitors</h2>
+    <form id="feedback-form">
+      <textarea id="feedback-text" placeholder="Write your feedback here..."></textarea><br>
+      <button type="button" onclick="addComment()">Submit</button>
+    </form>
+    <div id="comments-wall"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required><br>
+      <input type="email" id="email" placeholder="Your Email" required><br>
+      <textarea id="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Interaction -->
+  <section class="interaction">
+    <button class="like" onclick="alert('You liked this!')">👍 Like</button>
+    <button class="support" onclick="alert('Thanks for supporting us!')">💖 Support</button>
+    <button class="share" onclick="alert('Share this website!')">🔗 Share</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social">
+      <p>Follow & Share:</p>
+      <a href="#">Facebook</a> | 
+      <a href="#">X</a> | 
+      <a href="#">WhatsApp</a>
+    </div>
+    <p>© 2025 Darac Eagle Wings Academy. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/233530549480" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+  </a>
+
+  <script>
+    // Feedback system with localStorage
+    function loadComments() {
+      const comments = JSON.parse(localStorage.getItem('comments')) || [];
+      const wall = document.getElementById('comments-wall');
+      wall.innerHTML = '';
+      comments.forEach(comment => {
+        const div = document.createElement('div');
+        div.className = 'comment';
+        div.textContent = comment;
+        wall.appendChild(div);
+      });
+    }
+
+    function addComment() {
+      const text = document.getElementById('feedback-text').value.trim();
+      if (text) {
+        const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.push(text);
+        localStorage.setItem('comments', JSON.stringify(comments));
+        document.getElementById('feedback-text').value = '';
+        loadComments();
+      }
+    }
+
+    // Contact form submission
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      alert("Thank you " + name + "! Your message has been received.");
+      document.getElementById('contact-form').reset();
+    }
+
+    window.onload = loadComments;
+  </script>
+</body>
+</html>
