@@ -218,7 +218,7 @@
   <!-- News -->
   <section id="news">
     <h2>News & Announcements</h2>
-    <marquee behavior="scroll"direction="left" scrollamount="3" height="60px">
+    <marquee behavior="scroll"direction="left" scrollamount="3" id="holiday" height="60px">
       📢 Admissions are open! Join us today.
       <br><br>
       Public holiday notice! Dear Parents/Guradians and Students,
@@ -318,6 +318,18 @@
   </a>
 
   <script>
+    // Get today's date
+    const today = new Date ();
+    // Holiday ends on 22nd Sept 2025 
+    const holidayEnd = new Date("2025-09-22");
+    // If today is after the holiday, hide the announcement 
+    if (today > holidayEend) {const holidayNotice = 
+      document.getElementById("holiday-annoucement");
+      if (holidayNotice) {holidayNotice.style.display =
+        "none";
+
+      }
+    }
     // Feedback system with localStorage
     function loadComments() {
       const comments = JSON.parse(localStorage.getItem('comments')) || [];
