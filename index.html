@@ -275,13 +275,70 @@
 
   <!-- Feedback -->
   <section id="feedback">
-    <h2>Feedback from Visitors</h2>
-    <form id="feedback-form">
-      <textarea id="feedback-text" placeholder="Write your feedback here..."></textarea><br>
-      <button type="button" onclick="addComment()">Submit</button>
-    </form>
-    <div id="comments-wall"></div>
-  </section>
+    <h2>Visitors Feedback</h2>
+<p>We’d love to hear from you! Please send us your comments below:</p>
+
+<form id="feedbackForm" action="https://formspree.io/f/xrbygbrk" method="POST" style="
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+">
+  <label style="display:block; margin-bottom:10px;">
+    Your Name:<br>
+    <input type="text" name="name" required style="width:100%; padding:8px; margin-top:5px;">
+  </label>
+
+  <label style="display:block; margin-bottom:10px;">
+    Your Email:<br>
+    <input type="email" name="email" required style="width:100%; padding:8px; margin-top:5px;">
+  </label>
+
+  <label style="display:block; margin-bottom:10px;">
+    Your Message:<br>
+    <textarea name="message" rows="5" required style="width:100%; padding:8px; margin-top:5px;"></textarea>
+  </label>
+
+  <button type="submit" style="
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  ">
+    Send Feedback
+  </button>
+</form>
+
+<!-- Success message (hidden by default) -->
+<p id="successMessage" style="display:none; text-align:center; color:green; font-weight:bold; margin-top:15px;">
+  ✅ Thank you! Your feedback has been sent successfully.
+</p>
+
+<script>
+  const form = document.getElementById('feedbackForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    let data = new FormData(form);
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.reset();
+      successMessage.style.display = "block";
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  });
+</script>
 
   <!-- Contact -->
   <section id="contact">
