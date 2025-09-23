@@ -1,6 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+  .contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .contact-form button:hover {
+    background: #0066cc;
+  }
+</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Darac Eagle Wings School </title>
@@ -373,18 +413,20 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/xrbygbrk" method="POST" class="contact-form">
-  <label for="name">Your Name</label>
-  <input type="text" id="name" name="name" required>
+    <div class="contact-form">
+  <form action="https://formspree.io/f/xrbygbrk" method="POST">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-  <label for="email">Your Email</label>
-  <input type="email" id="email" name="email" required>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
 
-  <label for="message">Your Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
 
-  <button type="submit">Send Message</button>
-</form>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
 
   <!-- Interaction -->
   <section class="interaction">
